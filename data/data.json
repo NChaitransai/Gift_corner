@@ -1,0 +1,162 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "email": "admin@giftcorner.com",
+      "password": "admin123",
+      "name": "Admin Corner",
+      "role": "admin"
+    },
+    {
+      "id": "2",
+      "email": "user@giftcorner.com",
+      "password": "user123",
+      "name": "Jane Doe",
+      "role": "user"
+    },
+    {
+      "name": "chaitran",
+      "email": "nuthakkichaitrans@gmail.com",
+      "password": "Chaitran@2004",
+      "role": "user",
+      "id": "NDb-tqKzRcM"
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "title": "Personalized Engraved Wooden Photo Frame",
+      "price": 2499,
+      "image": "https://images.unsplash.com/photo-1544273677-c433136021d4?auto=format&fit=crop&w=600&q=80",
+      "category": "Home Decor",
+      "brand": "Crafted Memories",
+      "rating": 4.8,
+      "description": "Cherish your favorite moments with this beautifully crafted wooden frame. Customize it with a sweet message or key dates engraved on the wood.",
+      "stock": 50
+    },
+    {
+      "id": "2",
+      "title": "Custom Name Stainless Steel Keychain",
+      "price": 799,
+      "image": "https://images.unsplash.com/photo-1582139329536-e7284fece509?auto=format&fit=crop&w=600&q=80",
+      "category": "Accessories",
+      "brand": "Name & Co.",
+      "rating": 4.5,
+      "description": "A sleek, durable keychain featuring your choice of custom name or initials. Ideal for daily use and a simple, meaningful gift.",
+      "stock": 100
+    },
+    {
+      "id": "3",
+      "title": "Personalized Engraved Leather Journal",
+      "price": 1499,
+      "image": "https://images.unsplash.com/photo-1531346878377-a5be20888e57?auto=format&fit=crop&w=600&q=80",
+      "category": "Accessories",
+      "brand": "Page & Pen",
+      "rating": 4.8,
+      "description": "An elegant, refillable leather journal notebook perfect for sketching, journaling, or office notes. Engrave the front cover with initials or a name.",
+      "stock": 40
+    },
+    {
+      "id": "4",
+      "title": "Personalized Ceramic Coffee Mug",
+      "price": 599,
+      "image": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80",
+      "category": "Kitchenware",
+      "brand": "Mug Story",
+      "rating": 4.6,
+      "description": "Start the day with a smile! Have a memorable photo or custom text printed on a high-quality, dishwasher-safe ceramic mug.",
+      "stock": 75
+    },
+    {
+      "id": "5",
+      "title": "Eternal Rose Flower Box with LED Light",
+      "price": 3499,
+      "image": "https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&w=600&q=80",
+      "category": "Romantic",
+      "brand": "Forever Bloom",
+      "rating": 4.7,
+      "description": "A preserved red rose that lasts for years, enclosed in a glass dome with fairy LED lights. Includes a customized greeting card.",
+      "stock": 20
+    },
+    {
+      "id": "6",
+      "title": "Custom Spotify Plaque Acrylic Night Light",
+      "price": 1799,
+      "image": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80",
+      "category": "Home Decor",
+      "brand": "Glow Notes",
+      "rating": 4.7,
+      "description": "An elegant acrylic plaque styled like a Spotify player. Includes a custom photo, song title, artist, and Spotify link code that plays your song.",
+      "stock": 40
+    },
+    {
+      "id": "7",
+      "title": "Personalized Couple Photo Cushion",
+      "price": 899,
+      "image": "https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?auto=format&fit=crop&w=600&q=80",
+      "category": "Home Decor",
+      "brand": "Cozy Memories",
+      "rating": 4.6,
+      "description": "A soft premium cushion printed with your favourite couple photo and a short personal message.",
+      "stock": 45
+    },
+    {
+      "id": "8",
+      "title": "Birthday Chocolate Gift Hamper",
+      "price": 1299,
+      "image": "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=600&q=80",
+      "category": "Hampers",
+      "brand": "Sweet Celebrations",
+      "rating": 4.8,
+      "description": "A cheerful birthday hamper filled with assorted chocolates, a greeting card and festive packaging.",
+      "stock": 30
+    },
+    {
+      "id": "9",
+      "title": "Custom Initial Pendant Necklace",
+      "price": 1499,
+      "image": "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=600&q=80",
+      "category": "Accessories",
+      "brand": "Little Luxe",
+      "rating": 4.7,
+      "description": "An elegant everyday pendant finished with the initial of your choice and packed in a gift box.",
+      "stock": 55
+    },
+    {
+      "id": "10",
+      "title": "Personalized Desk Name Plate",
+      "price": 1199,
+      "image": "https://images.unsplash.com/photo-1497215842964-222b430dc094?auto=format&fit=crop&w=600&q=80",
+      "category": "Home Decor",
+      "brand": "Workday Gifts",
+      "rating": 4.5,
+      "description": "A clean wooden desk name plate made for office desks, home workspaces and graduation gifts.",
+      "stock": 40
+    },
+    {
+      "id": "11",
+      "title": "Anniversary Scented Candle Set",
+      "price": 999,
+      "image": "https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=600&q=80",
+      "category": "Romantic",
+      "brand": "Warm Wishes",
+      "rating": 4.6,
+      "description": "A set of hand-poured scented candles with a personalised anniversary sleeve and message card.",
+      "stock": 38
+    },
+    {
+      "id": "12",
+      "title": "Custom Photo Memory Scrapbook",
+      "price": 1599,
+      "image": "https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&w=600&q=80",
+      "category": "Keepsakes",
+      "brand": "Paper Stories",
+      "rating": 4.9,
+      "description": "A handcrafted scrapbook with themed pages for photographs, notes and memories from special occasions.",
+      "stock": 25
+    }
+  ],
+  "cart": [],
+  "orders": [],
+  "$schema": "../node_modules/json-server/schema.json"
+}

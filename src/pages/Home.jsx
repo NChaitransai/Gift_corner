@@ -42,7 +42,7 @@ const Home = () => {
               Explore Gifts Shop
               <ArrowRight size={18} />
             </Link>
-            <Link to="/products?category=Romantic" className="btn btn-secondary" style={{ padding: '0.85rem 2rem', fontSize: '1rem' }}>
+            <Link to="/products?category=Romantic & Hampers" className="btn btn-secondary" style={{ padding: '0.85rem 2rem', fontSize: '1rem' }}>
               Shop Romantic Gifts
             </Link>
           </div>

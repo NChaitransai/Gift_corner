@@ -31,31 +31,20 @@ const Products = () => {
     }
   }, [status, dispatch]);
 
-  // Sync filters from URL search params on mount or param changes
+  // Sync filters from URL search params on mount
   useEffect(() => {
     const searchParam = searchParams.get('search') || '';
     const categoryParam = searchParams.get('category') || 'All';
     setSearchQuery(searchParam);
     setSelectedCategory(categoryParam);
-  }, [searchParams]);
-
-  // Handle URL updates when filters change
-  const updateUrlParams = (newSearch, newCategory) => {
-    const params = {};
-    if (newSearch) params.search = newSearch;
-    if (newCategory && newCategory !== 'All') params.category = newCategory;
-    setSearchParams(params);
-  };
+  }, []);
 
   const handleSearchChange = (e) => {
-    const val = e.target.value;
-    setSearchQuery(val);
-    updateUrlParams(val, selectedCategory);
+    setSearchQuery(e.target.value);
   };
 
   const handleCategoryChange = (cat) => {
     setSelectedCategory(cat);
-    updateUrlParams(searchQuery, cat);
   };
 
   // Filter and sort products
@@ -215,7 +204,7 @@ const Products = () => {
             </div>
           ) : filteredProducts.length === 0 ? (
             <div className="glass" style={{ textAlign: 'center', padding: '4rem 2rem', color: 'var(--color-text-muted)' }}>
-              <h3 className="font-serif" style={{ fontSize: '1.5rem', color: 'var(--color-text-main)', marginBottom: '0.5rem' }}>No products found</h3>
+              <h3 className="font-serif" style={{ fontSize: '1.5rem', color: 'var(--color-text-main)', marginBottom: '0.5rem' }}>Product Not Found</h3>
               <p>Try clearing your filters or searching for something else.</p>
               <button
                 className="btn btn-primary"

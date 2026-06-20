@@ -225,7 +225,7 @@ const AdminDashboard = () => {
                     <option value="Home Decor">Home Decor</option>
                     <option value="Accessories">Accessories</option>
                     <option value="Kitchenware">Kitchenware</option>
-                    <option value="Romantic">Romantic</option>
+                    <option value="Romantic & Hampers">Romantic & Hampers</option>
                   </select>
                 </div>
                 <div className="form-group">

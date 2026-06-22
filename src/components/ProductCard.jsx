@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { Star, Eye } from 'lucide-react';
 import { formatPrice } from '../utils/currency';

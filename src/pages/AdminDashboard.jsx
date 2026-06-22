@@ -145,8 +145,20 @@ const AdminDashboard = () => {
         </button>
       </div>
 
-      {status === 'loading' ? (
+      {status === 'loading' || status === 'idle' ? (
         <div style={{ textAlign: 'center', padding: '5rem', color: 'var(--color-primary)' }}>Loading inventory catalog...</div>
+      ) : status === 'failed' ? (
+        <div className="glass" style={{ textAlign: 'center', padding: '4rem 2rem', color: 'var(--color-text-muted)' }}>
+          <h3 className="font-serif" style={{ fontSize: '1.5rem', color: 'var(--color-text-main)', marginBottom: '0.5rem' }}>Failed to Load Inventory</h3>
+          <p>Could not retrieve the inventory list. Please make sure the server is active.</p>
+          <button
+            className="btn btn-primary"
+            style={{ marginTop: '1.5rem' }}
+            onClick={() => dispatch(fetchProducts())}
+          >
+            Retry Loading
+          </button>
+        </div>
       ) : (
         <div className="glass" style={{ overflowX: 'auto', borderRadius: '16px', padding: '1rem' }}>
           <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left', minWidth: '600px' }}>

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import { useSelector, useDispatch } from 'react-redux';
-import { selectCartItems, selectCartTotal, clearCart } from '../redux/cartSlice';
+import { selectCartItems, selectCartTotal, clearCartAsync } from '../redux/cartSlice';
 import { useAuth } from '../context/AuthContext';
 import { orderAPI } from '../services/api';
 import { CreditCard, Truck, CheckCircle, ArrowLeft, Loader2 } from 'lucide-react';
@@ -59,7 +59,7 @@ const Checkout = () => {
 
       const response = await orderAPI.create(orderData);
       setCreatedOrderId(response.data.id);
-      dispatch(clearCart());
+      dispatch(clearCartAsync(user?.id));
       setOrderSuccess(true);
     } catch {
       alert('Failed to process order. Please try again.');

@@ -1,12 +1,14 @@
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { selectCartItems, selectCartTotal, removeFromCart, updateQuantity, clearCart } from '../redux/cartSlice';
+import { selectCartItems, selectCartTotal, removeFromCartAsync, updateQuantityAsync, clearCartAsync } from '../redux/cartSlice';
+import { useAuth } from '../context/AuthContext';
 import { ShoppingBag, ArrowRight, ArrowLeft } from 'lucide-react';
 import { formatPrice } from '../utils/currency';
 import CartItem from '../components/CartItem';
 
 const Cart = () => {
   const dispatch = useDispatch();
+  const { user } = useAuth();
   const cartItems = useSelector(selectCartItems);
   const subtotal = useSelector(selectCartTotal);
 
@@ -14,16 +16,16 @@ const Cart = () => {
   const total = subtotal + shipping;
 
   const handleQtyChange = (cartItemId, currentQty, amount) => {
-    dispatch(updateQuantity({ cartItemId, quantity: currentQty + amount }));
+    dispatch(updateQuantityAsync({ userId: user?.id, cartItemId, quantity: currentQty + amount }));
   };
 
   const handleRemove = (cartItemId) => {
-    dispatch(removeFromCart(cartItemId));
+    dispatch(removeFromCartAsync({ userId: user?.id, cartItemId }));
   };
 
   const handleClear = () => {
     if (window.confirm('Are you sure you want to clear your shopping cart?')) {
-      dispatch(clearCart());
+      dispatch(clearCartAsync(user?.id));
     }
   };
 

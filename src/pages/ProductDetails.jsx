@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from 'react';
-import { useParams, Link, useNavigate } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { useParams, Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { productAPI } from '../services/api';
-import { addToCart } from '../redux/cartSlice';
+import { addToCartAsync } from '../redux/cartSlice';
+import { useAuth } from '../context/AuthContext';
 import { Star, ShoppingCart, ArrowLeft, Check } from 'lucide-react';
 import { formatPrice } from '../utils/currency';
 
 const ProductDetails = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
-  const navigate = useNavigate();
 
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -26,6 +26,7 @@ const ProductDetails = () => {
         setProduct(response.data);
         setLoading(false);
       } catch (err) {
+        console.error(err);
         setError('Product not found or database error.');
         setLoading(false);
       }
@@ -37,15 +38,15 @@ const ProductDetails = () => {
     setQuantity(Math.max(1, quantity + val));
   };
 
+  const { user } = useAuth();
+
   const handleAddToCart = () => {
     if (!product) return;
 
     dispatch(
-      addToCart({
-        id: product.id,
-        title: product.title,
-        price: product.price,
-        image: product.image,
+      addToCartAsync({
+        userId: user?.id,
+        item: product,
         quantity: quantity,
       })
     );

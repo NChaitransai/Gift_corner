@@ -68,17 +68,6 @@
       "stock": 75
     },
     {
-      "id": "5",
-      "title": "Eternal Rose Flower Box with LED Light",
-      "price": 3499,
-      "image": "https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&w=600&q=80",
-      "category": "Romantic & Hampers",
-      "brand": "Forever Bloom",
-      "rating": 4.7,
-      "description": "A preserved red rose that lasts for years, enclosed in a glass dome with fairy LED lights. Includes a customized greeting card.",
-      "stock": 20
-    },
-    {
       "id": "6",
       "title": "Custom Spotify Plaque Acrylic Night Light",
       "price": 1799,
@@ -99,17 +88,6 @@
       "rating": 4.6,
       "description": "A soft premium cushion printed with your favourite couple photo and a short personal message.",
       "stock": 45
-    },
-    {
-      "id": "8",
-      "title": "Birthday Chocolate Gift Hamper",
-      "price": 1299,
-      "image": "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=600&q=80",
-      "category": "Romantic & Hampers",
-      "brand": "Sweet Celebrations",
-      "rating": 4.8,
-      "description": "A cheerful birthday hamper filled with assorted chocolates, a greeting card and festive packaging.",
-      "stock": 30
     },
     {
       "id": "9",
@@ -133,28 +111,8 @@
       "description": "A clean wooden desk name plate made for office desks, home workspaces and graduation gifts.",
       "stock": 40
     },
-    {
-      "id": "11",
-      "title": "Anniversary Scented Candle Set",
-      "price": 999,
-      "image": "https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=600&q=80",
-      "category": "Romantic & Hampers",
-      "brand": "Warm Wishes",
-      "rating": 4.6,
-      "description": "A set of hand-poured scented candles with a personalised anniversary sleeve and message card.",
-      "stock": 38
-    },
-    {
-      "id": "12",
-      "title": "Custom Photo Memory Scrapbook",
-      "price": 1599,
-      "image": "https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&w=600&q=80",
-      "category": "Romantic & Hampers",
-      "brand": "Paper Stories",
-      "rating": 4.9,
-      "description": "A handcrafted scrapbook with themed pages for photographs, notes and memories from special occasions.",
-      "stock": 25
-    },
+
+
     {
       "id": "13",
       "title": "Custom Engraved Wooden Wall Clock",
@@ -265,28 +223,8 @@
       "description": "Natural absorbant round cork coasters engraved with geometric borders and matching initials.",
       "stock": 90
     },
-    {
-      "id": "23",
-      "title": "Ultimate Couples Spa & Wellness Gift Box",
-      "price": 2999,
-      "image": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80",
-      "category": "Romantic & Hampers",
-      "brand": "Relax Loft",
-      "rating": 4.9,
-      "description": "Luxurious relaxation hamper loaded with scented organic body wash, bath salts, soft towels and massagers.",
-      "stock": 15
-    },
-    {
-      "id": "24",
-      "title": "Luxury Tea & Cookies Celebration Hamper",
-      "price": 1899,
-      "image": "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=600&q=80",
-      "category": "Romantic & Hampers",
-      "brand": "Daily Brews",
-      "rating": 4.8,
-      "description": "An elegant hamper box holding premium loose-leaf green tea tins, organic honey jars and handmade cookies.",
-      "stock": 25
-    },
+
+
     {
       "id": "25",
       "title": "Handcrafted Ceramic Essential Oil Diffuser",
@@ -385,39 +323,6 @@
       "rating": 4.5,
       "description": "A solid beechwood rolling pin engraved with a name, message, or fun baking pattern that imprints onto your cookie dough.",
       "stock": 40
-    },
-    {
-      "id": "34",
-      "title": "Anniversary Love Message in a Bottle",
-      "price": 899,
-      "image": "https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=600&q=80",
-      "category": "Romantic & Hampers",
-      "brand": "Whisper Love",
-      "rating": 4.8,
-      "description": "A beautiful, vintage-style glass bottle containing a hand-rolled parchment paper scroll for your personal love letter, complete with rose petals.",
-      "stock": 40
-    },
-    {
-      "id": "35",
-      "title": "Luxury Coffee & Gourmet Cookies Gift Basket",
-      "price": 2499,
-      "image": "https://images.unsplash.com/photo-1582281227297-f01cf4e39696?auto=format&fit=crop&w=600&q=80",
-      "category": "Romantic & Hampers",
-      "brand": "Gourmet Bites",
-      "rating": 4.9,
-      "description": "Treat your partner to breakfast in bed. Features premium medium-roast ground coffee bags, chocolate chip cookies, organic honey, and a wooden tray.",
-      "stock": 20
-    },
-    {
-      "id": "36",
-      "title": "Deluxe Rose Soap Petals & Bath Bomb Set",
-      "price": 1499,
-      "image": "https://images.unsplash.com/photo-1547887537-6158d64c35b3?auto=format&fit=crop&w=600&q=80",
-      "category": "Romantic & Hampers",
-      "brand": "Satin Skin",
-      "rating": 4.7,
-      "description": "A romantic gift set featuring delicate soap roses that dissolve in warm water, paired with lavender essential oil bath bombs and a plush towel.",
-      "stock": 35
     }
   ],
   "cart": [],

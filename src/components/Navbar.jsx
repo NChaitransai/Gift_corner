@@ -1,16 +1,28 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { useAuth } from '../context/AuthContext';
-import { selectCartCount } from '../redux/cartSlice';
+import { selectCartCount, syncCartOnLogin, clearCart } from '../redux/cartSlice';
 import { Gift, ShoppingBag, LogOut, Search, Settings } from 'lucide-react';
 
 const Navbar = () => {
   const { user, logout } = useAuth();
   const cartCount = useSelector(selectCartCount);
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const location = useLocation();
   const [searchQuery, setSearchQuery] = useState('');
+
+  useEffect(() => {
+    if (user?.id) {
+      dispatch(syncCartOnLogin(user.id));
+    }
+  }, [user?.id, dispatch]);
+
+  const handleLogout = () => {
+    logout();
+    dispatch(clearCart());
+  };
 
   const handleSearchSubmit = (e) => {
     e.preventDefault();
@@ -27,12 +39,12 @@ const Navbar = () => {
         
         {/* Left Side: Logo only */}
         <Link to="/" className="nav-logo" style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', textDecoration: 'none', flexShrink: 0 }}>
-          <Gift size={28} style={{ color: '#e29578' }} />
+          <Gift size={28} style={{ color: 'var(--color-primary)' }} />
           <span style={{ 
             fontFamily: 'var(--font-serif)', 
             fontSize: '1.65rem', 
             fontWeight: 700, 
-            color: '#F0E5D8',
+            color: 'var(--color-primary)',
             letterSpacing: '-0.01em'
           }}>GiftCorner</span>
         </Link>
@@ -59,23 +71,23 @@ const Navbar = () => {
             <Search size={16} style={{ position: 'absolute', left: '0.85rem', top: '50%', transform: 'translateY(-50%)', color: 'var(--color-text-muted)' }} />
           </form>
 
-          <Link to="/" className={`nav-link ${isActive('/') ? 'active' : ''}`} style={{ color: isActive('/') ? '#e29578' : '#9fa4bc', fontWeight: 500, fontSize: '1rem' }}>
+          <Link to="/" className={`nav-link ${isActive('/') ? 'active' : ''}`} style={{ color: isActive('/') ? 'var(--color-primary)' : 'var(--color-text-muted)', fontWeight: 500, fontSize: '1rem' }}>
             Home
           </Link>
-          <Link to="/products" className={`nav-link ${isActive('/products') ? 'active' : ''}`} style={{ color: isActive('/products') ? '#e29578' : '#9fa4bc', fontWeight: 500, fontSize: '1rem' }}>
+          <Link to="/products" className={`nav-link ${isActive('/products') ? 'active' : ''}`} style={{ color: isActive('/products') ? 'var(--color-primary)' : 'var(--color-text-muted)', fontWeight: 500, fontSize: '1rem' }}>
             Gifts Shop
           </Link>
           
           {user && user.role === 'admin' && (
-            <Link to="/admin" className={`nav-link ${isActive('/admin') ? 'active' : ''}`} style={{ display: 'flex', alignItems: 'center', gap: '0.25rem', color: 'var(--color-secondary)' }}>
+            <Link to="/admin" className={`nav-link ${isActive('/admin') ? 'active' : ''}`} style={{ display: 'flex', alignItems: 'center', gap: '0.25rem', color: isActive('/admin') ? 'var(--color-primary)' : 'var(--color-text-muted)' }}>
               <Settings size={16} />
               Admin
             </Link>
           )}
 
           {/* Cart Icon with Overlapping Round Badge */}
-          <Link to="/cart" style={{ position: 'relative', display: 'flex', alignItems: 'center', padding: '0.25rem', color: '#9fa4bc', transition: 'color 0.2s' }}>
-            <ShoppingBag size={24} style={{ color: isActive('/cart') ? '#e29578' : 'inherit' }} />
+          <Link to="/cart" style={{ position: 'relative', display: 'flex', alignItems: 'center', padding: '0.25rem', color: isActive('/cart') ? 'var(--color-primary)' : 'var(--color-text-muted)', transition: 'color 0.2s' }}>
+            <ShoppingBag size={24} style={{ color: isActive('/cart') ? 'var(--color-primary)' : 'inherit' }} />
             {cartCount > 0 && (
               <span style={{ 
                 position: 'absolute', 
@@ -88,8 +100,8 @@ const Navbar = () => {
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                backgroundColor: '#e29578', 
-                color: '#07050f',
+                backgroundColor: 'var(--color-primary)', 
+                color: '#ffffff',
                 fontWeight: 700
               }}>
                 {cartCount}
@@ -106,25 +118,18 @@ const Navbar = () => {
                   {user.name}
                 </Link>
               </div>
-              <button onClick={logout} className="btn-text" style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
+              <button onClick={handleLogout} className="btn-text" style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
                 <LogOut size={18} />
               </button>
             </div>
           ) : (
-            <Link to="/login" className="btn" style={{ 
+            <Link to="/login" className="btn btn-primary" style={{ 
               padding: '0.5rem 1.65rem', 
               fontSize: '0.95rem',
               fontWeight: 700,
-              color: '#07050f',
-              background: 'linear-gradient(135deg, #e29578, #f4a261)',
               borderRadius: '9999px',
-              border: 'none',
-              boxShadow: 'none',
               textTransform: 'none',
-              cursor: 'pointer',
-              display: 'inline-flex',
-              alignItems: 'center',
-              justifyContent: 'center'
+              cursor: 'pointer'
             }}>
               Sign In
             </Link>

@@ -1,5 +1,5 @@
 import { createContext, useState, useContext } from 'react';
-import { authAPI } from '../services/api';
+import { authAPI, loginAPI } from '../services/api';
 
 const AuthContext = createContext(null);
 
@@ -22,6 +22,12 @@ export const AuthProvider = ({ children }) => {
       );
 
       if (foundUser) {
+        await loginAPI.saveLogin({
+          userId: foundUser.id,
+          email: foundUser.email,
+          loginTime: new Date().toISOString(),
+        });
+
         // Exclude password from stored user for security
         const safeUser = { ...foundUser };
         delete safeUser.password;

@@ -1,7 +1,6 @@
-import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-// Protected Route Guard
+// Protected Route Guard*
 import ProtectedRoute from '../components/ProtectedRoute';
 
 // Pages
@@ -24,16 +23,9 @@ const AppRoutes = () => {
       <Route path="/product/:id" element={<ProductDetails />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
+      <Route path="/cart" element={<Cart />} />
       
       {/* User Protected Routes */}
-      <Route 
-        path="/cart" 
-        element={
-          <ProtectedRoute>
-            <Cart />
-          </ProtectedRoute>
-        } 
-      />
       <Route 
         path="/orders" 
         element={

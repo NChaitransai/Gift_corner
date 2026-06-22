@@ -27,4 +27,22 @@ export const orderAPI = {
   getUserOrders: (userId) => api.get(`/orders?userId=${userId}`),
 };
 
+export const loginAPI = {
+  saveLogin: (loginData) => api.post('/loginHistory', loginData),
+};
+
+export const cartAPI = {
+  getCart: (userId) =>
+    api.get(`/carts?userId=${userId}`),
+
+  addCartItem: (data) =>
+    api.post('/carts', data),
+
+  updateCartItem: (id, data) =>
+    api.patch(`/carts/${id}`, data),
+
+  removeCartItem: (id) =>
+    api.delete(`/carts/${id}`),
+};
+
 export default api;

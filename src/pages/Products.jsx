@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useSearchParams, Link } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchProducts, selectAllProducts, selectProductsStatus } from '../redux/productSlice';
 import { SlidersHorizontal } from 'lucide-react';
@@ -31,13 +31,12 @@ const Products = () => {
     }
   }, [status, dispatch]);
 
-  // Sync filters from URL search params on mount
   useEffect(() => {
     const searchParam = searchParams.get('search') || '';
     const categoryParam = searchParams.get('category') || 'All';
     setSearchQuery(searchParam);
     setSelectedCategory(categoryParam);
-  }, []);
+  }, [searchParams]);
 
   const handleSearchChange = (e) => {
     setSearchQuery(e.target.value);
@@ -198,9 +197,21 @@ const Products = () => {
 
         {/* Product Grid Area */}
         <div>
-          {status === 'loading' ? (
+          {status === 'loading' || status === 'idle' ? (
             <div style={{ display: 'flex', justifyContent: 'center', padding: '5rem', color: 'var(--color-primary)' }}>
               <div className="font-serif" style={{ fontSize: '1.25rem' }}>Loading catalog...</div>
+            </div>
+          ) : status === 'failed' ? (
+            <div className="glass" style={{ textAlign: 'center', padding: '4rem 2rem', color: 'var(--color-text-muted)' }}>
+              <h3 className="font-serif" style={{ fontSize: '1.5rem', color: 'var(--color-text-main)', marginBottom: '0.5rem' }}>Failed to Load Catalog</h3>
+              <p>Could not retrieve the product inventory. Please check if the backend service is running.</p>
+              <button
+                className="btn btn-primary"
+                style={{ marginTop: '1.5rem' }}
+                onClick={() => dispatch(fetchProducts())}
+              >
+                Retry Loading
+              </button>
             </div>
           ) : filteredProducts.length === 0 ? (
             <div className="glass" style={{ textAlign: 'center', padding: '4rem 2rem', color: 'var(--color-text-muted)' }}>

@@ -341,6 +341,139 @@
       "description": "A solid beechwood rolling pin engraved with a name, message, or fun baking pattern that imprints onto your cookie dough.",
       "stock": 40
     }
+    ,
+{
+  "id": "34",
+  "title": "Birthday Surprise Gift Box",
+  "price": 1499,
+  "image": "https://images.unsplash.com/photo-1513267048331-5611cad62e41?auto=format&fit=crop&w=600&q=80",
+  "category": "Birthday Gifts",
+  "brand": "Happy Moments",
+  "rating": 4.8,
+  "description": "Premium birthday gift hamper with chocolates and greeting card.",
+  "stock": 40
+},
+{
+  "id": "35",
+  "title": "Anniversary Couple Gift Hamper",
+  "price": 2499,
+  "image": "https://images.unsplash.com/photo-1511988617509-a57c8a288659?auto=format&fit=crop&w=600&q=80",
+  "category": "Anniversary Gifts",
+  "brand": "Love Forever",
+  "rating": 4.9,
+  "description": "Romantic anniversary hamper with personalized gifts.",
+  "stock": 30
+},
+{
+  "id": "36",
+  "title": "Soft Teddy Bear",
+  "price": 799,
+  "image": "https://images.unsplash.com/photo-1545558014-8692077e9b5c?auto=format&fit=crop&w=600&q=80",
+  "category": "Toys & Kids",
+  "brand": "Cute Toys",
+  "rating": 4.7,
+  "description": "Super soft teddy bear for kids and loved ones.",
+  "stock": 60
+},
+{
+  "id": "37",
+  "title": "Red Rose Bouquet",
+  "price": 999,
+  "image": "https://images.unsplash.com/photo-1520763185298-1b434c919102?auto=format&fit=crop&w=600&q=80",
+  "category": "Flowers",
+  "brand": "Bloom Garden",
+  "rating": 4.8,
+  "description": "Fresh handpicked red rose bouquet.",
+  "stock": 50
+},
+{
+  "id": "38",
+  "title": "Bluetooth Speaker",
+  "price": 2999,
+  "image": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=600&q=80",
+  "category": "Electronics",
+  "brand": "SoundPro",
+  "rating": 4.7,
+  "description": "Portable wireless bluetooth speaker with deep bass.",
+  "stock": 35
+},
+{
+  "id": "39",
+  "title": "Premium Leather Belt",
+  "price": 1299,
+  "image": "https://images.unsplash.com/photo-1624222247344-550fb60583dc?auto=format&fit=crop&w=600&q=80",
+  "category": "Fashion",
+  "brand": "StyleHub",
+  "rating": 4.6,
+  "description": "Genuine leather belt for men.",
+  "stock": 45
+},
+{
+  "id": "40",
+  "title": "Luxury Analog Watch",
+  "price": 3999,
+  "image": "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=600&q=80",
+  "category": "Watches",
+  "brand": "TimeCraft",
+  "rating": 4.9,
+  "description": "Elegant stainless steel analog watch.",
+  "stock": 25
+},
+{
+  "id": "41",
+  "title": "Chocolate Gift Hamper",
+  "price": 1799,
+  "image": "https://images.unsplash.com/photo-1549007994-cb92caebd54b?auto=format&fit=crop&w=600&q=80",
+  "category": "Gift Hampers",
+  "brand": "Sweet Delights",
+  "rating": 4.8,
+  "description": "Premium assorted chocolates packed in a luxury gift box.",
+  "stock": 40
+},
+{
+  "id": "42",
+  "title": "LED Moon Lamp",
+  "price": 1599,
+  "image": "https://images.unsplash.com/photo-1517991104123-1d56a6e81ed9?auto=format&fit=crop&w=600&q=80",
+  "category": "Lighting",
+  "brand": "MoonGlow",
+  "rating": 4.7,
+  "description": "Beautiful 3D moon lamp with adjustable brightness.",
+  "stock": 30
+},
+{
+  "id": "43",
+  "title": "Wireless Earbuds",
+  "price": 3499,
+  "image": "https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?auto=format&fit=crop&w=600&q=80",
+  "category": "Electronics",
+  "brand": "SoundBeat",
+  "rating": 4.8,
+  "description": "Noise-cancelling wireless earbuds with charging case.",
+  "stock": 50
+},
+{
+  "id": "44",
+  "title": "Personalized Photo Album",
+  "price": 1899,
+  "image": "https://images.unsplash.com/photo-1516542076529-1ea3854896f2?auto=format&fit=crop&w=600&q=80",
+  "category": "Photo Gifts",
+  "brand": "Memory Lane",
+  "rating": 4.9,
+  "description": "Premium custom photo album for special memories.",
+  "stock": 20
+},
+{
+  "id": "45",
+  "title": "Valentine Love Cushion",
+  "price": 999,
+  "image": "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=600&q=80",
+  "category": "Valentine Gifts",
+  "brand": "LoveNest",
+  "rating": 4.8,
+  "description": "Soft heart-shaped cushion with romantic design.",
+  "stock": 35
+}
   ],
   "orders": [
     {
